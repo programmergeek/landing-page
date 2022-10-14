@@ -29,7 +29,9 @@ type Props = {
 
 /** Wrapper component for desktop and mobile navigation bars */
 const NavigationBarWrapper: React.FC<Props> = ({ ...props }) => {
-
+    // The component assumes that you are passing in two child components:
+    //      1. A logo
+    //      2. A group of buttons wrapped in a single element, like a div.
     const children = Children.map(props.children, (value) => value) as React.ReactNode[]
 
     return (
