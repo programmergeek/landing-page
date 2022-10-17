@@ -23,3 +23,7 @@ export const PrimaryButton: React.FC<Props> = ({...props}) => {
 export const SecondaryButton:React.FC<Props> = ({...props}) => {
     return <Button className='border-2 border-black font-sourceCodePro bg-transparent font-semibold'>{props.children}</Button>
 }
+
+export const TertiaryButton:React.FC<Props> = ({...props}) => {
+    return <Button className='font-sourceCodePro not-italic font-semibold'>{props.children}</Button>
+}
