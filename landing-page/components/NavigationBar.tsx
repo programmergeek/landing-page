@@ -36,13 +36,13 @@ const NavigationBarWrapper: React.FC<Props> = ({ ...props }) => {
     const children = Children.map(props.children, (value) => value) as React.ReactNode[]
 
     return (
-    <nav className='hidden md:flex'>
-        <div className='w-80'>
+    <nav className='flex'>
+        <div className='lg:w-72 md:w-60 sm:w-52 w-36'>
             <a href="/">
             {children[0]}
             </a>
         </div>
-        <div className='ml-auto mt-3'>
+        <div className='hidden lg:block ml-auto mt-3'>
             {children[1]}
         </div>
     </nav>
@@ -53,7 +53,7 @@ const NavigationBarWrapper: React.FC<Props> = ({ ...props }) => {
 export const NavigationBar: React.FC = () => {
     return (
     <NavigationBarWrapper> 
-        <p className='font-sourceCodePro text-4xl font-medium italic tracking-widest bg-folderYellow rounded-tr-[5px] text-white text-center py-2'>Joseph</p>
+        <p className='font-sourceCodePro text-2xl md:text-3xl lg:text-4xl font-medium italic tracking-widest bg-folderYellow rounded-tr-[5px] text-white text-center py-2'>JOSEPH</p>
         <div className='flex justify-end flex-row'>
             {
                 ["About Me", "Projects", "Skills", "Contact Me"].map((value) => {
