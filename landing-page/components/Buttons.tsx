@@ -5,6 +5,11 @@ type ButtonProps = {
     children?: React.ReactNode
 }
 
+type iconProps = {
+    icon: React.ReactNode,
+    style: "solid" | "outline"
+}
+
 type Props = {
     children?: React.ReactNode,
     icon?: React.ReactNode
@@ -26,4 +31,8 @@ export const SecondaryButton:React.FC<Props> = ({...props}) => {
 
 export const TertiaryButton:React.FC<Props> = ({...props}) => {
     return <Button className='font-sourceCodePro not-italic font-semibold'>{props.children}</Button>
+}
+
+export const IconButton: React.FC<iconProps> = ({...props}) => {
+    return props.style === "solid" ? <button className='rounded-full p-3 bg-black'>{props.icon}</button> : <button className="rounded-full p-3 border-2 border-black bg-transparent">{props.icon}</button>
 }
