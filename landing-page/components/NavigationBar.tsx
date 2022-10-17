@@ -1,4 +1,5 @@
 import React, { Children } from 'react'
+import { TertiaryButton } from './Buttons'
 
 /**
  * A bottom navigation bar meant to be used with smaller screens.
@@ -57,7 +58,7 @@ export const NavigationBar: React.FC = () => {
         <div className='flex justify-end flex-row pr-7'>
             {
                 ["About Me", "Projects", "Skills", "Contact Me"].map((value) => {
-                    return <button className='font-sourceCodePro px-4 py-3 font-semibold'>{value}</button>
+                    return <TertiaryButton>{value}</TertiaryButton>
                 })
             }
         </div> 
