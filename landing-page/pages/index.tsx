@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { BottomNavigationBar, NavigationBar, PrimaryButton } from '../components'
+import { BottomNavigationBar, NavigationBar, PrimaryButton, SecondaryButton } from '../components'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -10,6 +10,7 @@ const Home: NextPage = () => {
       <NavigationBar />
       <BottomNavigationBar />
       <PrimaryButton>Get to know me</PrimaryButton>
+      <SecondaryButton>Get to know me</SecondaryButton>
     </div>
   )
 }
