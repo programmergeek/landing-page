@@ -1,32 +1,37 @@
-import React, { Children } from 'react'
+import React, { Children, useState } from 'react'
 import { TertiaryButton } from './Buttons'
-
-/**
- * A bottom navigation bar meant to be used with smaller screens.
- */
-export const BottomNavigationBar: React.FC = () => {
-    return (
-    <div className= "md:hidden bg-background border-2 rounded-[5px] border-black w-full h-16 grid grid-cols-4 py-1.5 fixed bottom-0" >
-        {
-            // map the menu options to navigation buttons.
-            // TODO: replace buttons names with objects that contain the name of the button along with its icon.
-            ['About Me', 'Project', 'Skills', 'Contact Me'].map((value) => (
-                <div key={value} className='flex flex-col'>
-                    <div className="flex justify-center">
-                        {/* placeholder icon button*/}
-                        <button id={value} className='rounded-full border border-black w-8 h-8'></button>
-                    </div>
-                    <label htmlFor={value} className='font-sourceCodePro font-semibold text-center'>{value}</label>
-                </div>
-            ))
-        }
-    </div>
-    )
-}
 
 type Props = {
     children: React.ReactNode
 }
+
+export const NavigationWidget: React.FC = () => {
+    const [isOpen, toggleMenu] = useState<boolean>(true)
+
+    return (
+    <div className={`fixed -bottom-[250px] -right-[250px] w-[500px] h-[500px]`}>
+        <button className={`${!isOpen ? "block": "hidden"} bg-folderYellow p-3 rounded-full absolute top-48 left-48`} onClick={() => toggleMenu(true)}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+            </svg>    
+        </button>  
+        <div className= {`realative bg-folderYellow text-white ${ isOpen ? 'w-[500px] h-[500px]' : 'w-0 h-0' } rounded-full`}>
+        <ul className='font-sourceCodePro absolute left-28 top-28 font-semibold'>
+            <li>About Me</li>
+            <li>Projects</li>
+            <li>Skills</li>
+            <li>Contact Me</li>
+            <li className={`${isOpen ? "flex" : "hidden"} justify-end cursor-pointer`} onClick={() => toggleMenu(false)}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </li>
+        </ul>
+        </div>
+    </div>
+    )
+}
+
 
 /** Wrapper component for desktop and mobile navigation bars */
 const NavigationBarWrapper: React.FC<Props> = ({ ...props }) => {
