@@ -51,5 +51,12 @@ export const IconButton: React.FC<iconProps> = ({...props}) => {
             </div>
             <label className='text-center font-roboto italic font-semibold' htmlFor="">{props.label}</label>
         </div>
-    ) : <button className="rounded-full p-3 border-2 border-black bg-transparent">{props.icon}</button>
+    ) : 
+    (
+        <div className="flex flex-col w-fit">
+            <div className="flex justify-cen">
+                <button className="rounded-full p-3 border-2 border-black bg-transparent">{props.icon}</button>
+            </div>
+        </div>
+    )
 }
