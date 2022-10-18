@@ -8,7 +8,8 @@ type ButtonProps = {
 
 type iconProps = {
     icon: React.ReactNode,
-    style: "solid" | "outline"
+    style: "solid" | "outline",
+    label?: string
 }
 
 type Props = {
@@ -42,5 +43,13 @@ export const TertiaryButton:React.FC<Props> = ({...props}) => {
 }
 
 export const IconButton: React.FC<iconProps> = ({...props}) => {
-    return props.style === "solid" ? <button className='rounded-full p-3 bg-black'>{props.icon}</button> : <button className="rounded-full p-3 border-2 border-black bg-transparent">{props.icon}</button>
+    return props.style === "solid" ? 
+    (
+        <div className="flex flex-col w-fit">
+            <div className="flex justify-center">
+                <button className='rounded-full p-3 bg-black w-fit'>{props.icon}</button>
+            </div>
+            <label className='text-center font-roboto italic font-semibold' htmlFor="">{props.label}</label>
+        </div>
+    ) : <button className="rounded-full p-3 border-2 border-black bg-transparent">{props.icon}</button>
 }
