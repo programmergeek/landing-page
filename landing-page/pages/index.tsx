@@ -1,13 +1,18 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Card } from '../components'
+import { Card, ProjectCard } from '../components'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
-      <Card></Card>
+      <ProjectCard
+      projectName='The Blog'
+      description='A personal blog built in pure react.'
+      repoLink='https://github.com/programmergeek/the-blog'
+      demoLink='https://blog.willjoseph.xyz'
+      />
     </div>
   )
 }
