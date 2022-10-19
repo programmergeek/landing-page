@@ -16,6 +16,10 @@ module.exports = {
         accent: "#592905",
         "card-paper": "#FFF3E1",
         background: "#FFFCF4"
+      },
+      boxShadow:{
+        hardShadowLeft: "-3px 3px rgb(0,0,0)",
+        hardShadowRight: "3px 3px rgb(0,0,0)"
       }
     },
   },
