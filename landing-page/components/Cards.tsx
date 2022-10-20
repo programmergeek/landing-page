@@ -3,6 +3,7 @@ import { IconButton } from "./Buttons";
 
 type Props = {
   children?: React.ReactNode;
+  className?: string
 };
 
 type ProjectCardProps = {
@@ -15,7 +16,7 @@ type ProjectCardProps = {
 
 export const Card: React.FC<Props> = ({ ...props }) => {
   return (
-    <div className="min-h-[150px] p-5 bg-card-paper rounded-md border-2 border-black shadow-hardShadowLeft mx-3">
+    <div className={`${props.className} min-h-[150px] p-5 bg-card-paper rounded-md border-2 border-black shadow-hardShadowLeft mx-3`}>
       {props.children}
     </div>
   );
@@ -23,7 +24,7 @@ export const Card: React.FC<Props> = ({ ...props }) => {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ ...props }) => {
     return (
-      <Card>
+      <Card className="max-w-3xl">
         {!props.reverse ? (
           <div className="flex flex-col gap-3 md:grid md:grid-cols-2">
             <span className="font-robot font-bold italic text-4xl flex md:justify-center my-auto">
@@ -80,7 +81,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ ...props }) => {
             </div>
           </div>
         ) : (
-          <div className="flex flex-col gap-3 md:grid md:grid-cols-2">
+          <div className="flex flex-col-reverse gap-3 md:grid md:grid-cols-2">
             <div className="flex flex-col mt-3 md:mt-0 md:justify-end gap-9">
               <p className="text-left font-roboto font-bold italic mt-9">
                 {props.description}

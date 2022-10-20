@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div className="">
       <ProjectCard
       projectName='The Blog'
       description='A personal blog built in pure react.'
