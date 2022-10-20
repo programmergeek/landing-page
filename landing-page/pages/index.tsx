@@ -13,6 +13,13 @@ const Home: NextPage = () => {
       repoLink='https://github.com/programmergeek/the-blog'
       demoLink='https://blog.willjoseph.xyz'
       />
+      <ProjectCard
+      projectName='The Blog'
+      description='A personal blog built in pure react.'
+      repoLink='https://github.com/programmergeek/the-blog'
+      demoLink='https://blog.willjoseph.xyz'
+      reverse
+      />
     </div>
   )
 }
