@@ -58,7 +58,7 @@ const NavigationBarWrapper: React.FC<Props> = ({ ...props }) => {
 export const NavigationBar: React.FC = () => {
     return (
     <NavigationBarWrapper> 
-        <p className='font-sourceCodePro text-2xl md:text-3xl lg:text-4xl font-medium italic tracking-widest bg-folderYellow rounded-tr-[5px] text-white text-center py-0'>JOSEPH</p>
+        <p className='font-sourceCodePro text-2xl md:text-3xl lg:text-4xl font-medium italic tracking-widest bg-folderYellow rounded-tr-[5px] text-white text-center py-1 md:py-2 lg:py-3'>JOSEPH</p>
         <div className='flex justify-end flex-row'>
             {
                 ["About Me", "Projects", "Skills", "Contact Me"].map((value) => {
