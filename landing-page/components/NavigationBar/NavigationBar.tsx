@@ -19,7 +19,7 @@ const NavigationBarWrapper: React.FC<Props> = ({ ...props }) => {
             {children[0]}
             </a>
         </div>
-        <div className='hidden lg:block ml-auto mt-3'>
+        <div className='hidden md:block ml-auto mt-3'>
             {children[1]}
         </div>
     </nav>

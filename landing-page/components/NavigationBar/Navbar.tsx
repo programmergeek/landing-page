@@ -6,7 +6,7 @@ export const Navbar: React.FC = () => {
     return (
         <div>
             <NavigationBar />
-            <div className="lg:hidden">
+            <div className="md:hidden">
                 <NavigationWidget />
             </div>
         </div>
