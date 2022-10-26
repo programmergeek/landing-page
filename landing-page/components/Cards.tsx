@@ -24,7 +24,7 @@ export const Card: React.FC<Props> = ({ ...props }) => {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ ...props }) => {
     return (
-      <Card className={`max-w-3xl ${props.reverse ? 'shadow-hardShadowRight' : ''}`}>
+      <Card className={`max-w-3xl sm:min-w-[600px] lg:min-w-[850px] ${props.reverse ? 'shadow-hardShadowRight' : ''}`}>
         {!props.reverse ? (
           <div className="flex flex-col gap-3 md:grid md:grid-cols-2">
             <span className="font-robot font-bold italic text-4xl flex md:justify-center my-auto">
