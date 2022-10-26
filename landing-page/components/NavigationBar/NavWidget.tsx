@@ -31,11 +31,14 @@ export const NavigationWidget: React.FC = () => {
           isOpen ? "w-[500px] h-[500px]" : "w-0 h-0"
         } rounded-full`}
       >
-        <ul className="font-sourceCodePro absolute left-28 top-28 font-semibold">
-          <li>About Me</li>
-          <li>Projects</li>
-          <li>Skills</li>
-          <li>Contact Me</li>
+        <ul className="font-sourceCodePro absolute left-28 top-20 font-semibold">
+          {['About Me', 'Projects', 'Skills', 'Contact Me'].map((value) => (
+            <li className='py-1'>
+                <a href={`#${value}`}>
+                    {value}
+                </a>
+            </li>
+          ))}
           <li
             className={`${
               isOpen ? "flex" : "hidden"
