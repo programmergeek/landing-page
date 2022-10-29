@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Card, HeroBanner, IconButton, Navbar, ProjectCard } from '../components'
+import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -23,60 +24,21 @@ const Home: NextPage = () => {
           <div className="w-fit mx-auto mt-8 flex gap-5">
             <IconButton
               style="outline"
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-                  />
-                </svg>
-              }
+              icon={<FaGithub className="h-6 w-6 md:h-7 md:w-7" />}
+              href="https://github.com/programmergeek"
+              blank
             />
             <IconButton
               style="outline"
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-                  />
-                </svg>
-              }
+              icon={<FaLinkedinIn className="h-6 w-6 md:h-7 md:w-7" />}
+              href="https://www.linkedin.com/in/thato-will-joseph-b0aa54219/"
+              blank
             />
             <IconButton
               style="outline"
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-                  />
-                </svg>
-              }
+              icon={<FaTwitter className="h-6 w-6 md:h-7 md:w-7" />}
+              href="https://twitter.com/programergeek"
+              blank
             />
           </div>
         </Card>
@@ -92,7 +54,7 @@ const Home: NextPage = () => {
               description="Take a peek into my what I've been learning."
               demoLink="https://blog.willjoseph.xyz"
               repoLink="https://github.com/programmergeek/the-blog"
-              />
+            />
           </div>
           <div className="w-fit ml-auto lg:m-0">
             <ProjectCard
@@ -109,8 +71,8 @@ const Home: NextPage = () => {
               description="Take a peek into my what I've been learning."
               demoLink="https://blog.willjoseph.xyz"
               repoLink="https://github.com/programmergeek/the-blog"
-              />
-            </div>
+            />
+          </div>
         </div>
       </section>
     </div>
