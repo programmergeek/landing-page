@@ -20,7 +20,7 @@ type ProjectCardProps = {
 
 export const Card: React.FC<Props> = ({ ...props }) => {
   return (
-    <div className={`${props.className} min-h-[150px] p-5 bg-card-paper rounded-md border-2 border-black shadow-hardShadowLeft mx-3`}>
+    <div className={`${props.className} min-h-[150px] p-5 bg-card-paper rounded-md border-2 border-black shadow-hardShadowLeft`}>
       {props.children}
     </div>
   );

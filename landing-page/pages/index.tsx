@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Accent, Card, HeroBanner, IconButton, Navbar, ProjectCard } from '../components'
+import { Accent, Card, DripDown, HeroBanner, IconButton, Navbar, ProjectCard } from '../components'
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import styles from '../styles/Home.module.css'
 
@@ -76,6 +76,17 @@ const Home: NextPage = () => {
             />
           </div>
         </div>
+      </section>
+      <section id="Skills" className="relative">
+        <h1 className="font-sourceCodepro italic font-semibold text-3xl my-5 text-center">
+          Skills
+        </h1>
+        <div>
+          {
+            // TO DO: create icon components for javascript, typescript, nextjs, html, css, tailwindcss, react
+          }
+        </div>
+        <DripDown className='sm:hidden' />
       </section>
     </div>
   );
