@@ -4,7 +4,7 @@ export const NavigationWidget: React.FC = () => {
   const [isOpen, toggleMenu] = useState<boolean>(false);
 
   return (
-    <div className={`fixed -bottom-[250px] -right-[250px] w-[500px] h-[500px]`}>
+    <div className={`fixed -bottom-[250px] -right-[250px] w-[500px] h-[500px] z-10`}>
       <button
         className={`${
           !isOpen ? "block" : "hidden"
