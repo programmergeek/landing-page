@@ -84,7 +84,7 @@ export const IconButton: React.FC<iconProps> = ({...props}) => {
     ) : (
       <a href={props.href} target={props.blank ? "_blank" : undefined}>
         <div className="flex flex-col w-fit">
-          <div className="flex justify-cen">
+          <div className="flex justify-center">
             <button className="rounded-full p-2 md:p-3 border-2 border-black bg-transparent">
               {props.icon}
             </button>
