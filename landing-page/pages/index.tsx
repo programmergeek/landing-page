@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Accent, Card, HeroBanner, IconButton, Navbar, ProjectCard } from '../components'
+import { Accent, Card, HeroBanner, IconButton, Navbar, ProjectCard, Tags } from '../components'
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import styles from '../styles/Home.module.css'
 
@@ -12,6 +12,7 @@ const Home: NextPage = () => {
       <HeroBanner />
       <section id="About Me">
         <Card className=" relative mt-3 mx-1.5">
+          <Tags>TypeScript</Tags>
           <Accent className="absolute bottom-3 right-3 lg:bottom-6 lg:right-6 transform md:scale-150 lg:scale-[2.5]" />
           <Accent className="absolute top-3 left-3 lg:top-6 lg:left-6 -rotate-180 transform md:scale-150 lg:scale-[2.5]" />
           <h1 className="font-sourceCodePro italic text-2xl lg:text-3xl font-semibold text-center mb-5 lg:mb-11">
