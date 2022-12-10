@@ -29,7 +29,7 @@ export const Card: React.FC<Props> = ({ ...props }) => {
 export const ProjectCard: React.FC<ProjectCardProps> = ({ ...props }) => {
     return (
       <Card
-        className={`max-w-3xl sm:min-w-[600px] lg:min-w-[850px] ${
+        className={`max-w-3xl sm:min-w-[600px] lg:min-w-[875px] ${
           props.reverse ? "shadow-hardShadowRight" : ""
         }`}
       >

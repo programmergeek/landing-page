@@ -17,8 +17,8 @@ const Home: NextPage = () => {
           <h1 className="font-sourceCodepro italic font-semibold text-3xl my-5 text-center">
             Projects
           </h1>
-          <div className="flex flex-col lg:flex-row justify-center gap-10 lg:flex-wrap">
-            <div className="w-fit mr-auto">
+          <div className="flex flex-col lg:flex-row justify-center gap-10 lg:gap-14 lg:flex-wrap">
+            <div className="w-fit mr-auto 2xl:m-0">
               <ProjectCard
                 projectName="The Blog"
                 description="Take a peek into my what I've been learning."
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
                 repoLink="https://github.com/programmergeek/the-blog"
                 />
             </div>
-            <div className="w-fit ml-auto">
+            <div className="w-fit ml-auto 2xl:m-0">
               <ProjectCard
                 reverse
                 projectName="The Blog"
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
                 repoLink="https://github.com/programmergeek/the-blog"
                 />
             </div>
-            <div className="w-fit mr-auto">
+            <div className="w-fit mr-auto 2xl:m-0">
               <ProjectCard
                 projectName="The Blog"
                 description="Take a peek into my what I've been learning."
