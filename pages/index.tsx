@@ -11,39 +11,41 @@ const Home: NextPage = () => {
     <div className="">
       <Navbar />
       <HeroBanner />
-      <About />
-      <section className="mt-3" id="Projects">
-        <h1 className="font-sourceCodepro italic font-semibold text-3xl my-5 text-center">
-          Projects
-        </h1>
-        <div className="flex flex-col lg:flex-row justify-center gap-10 lg:flex-wrap">
-          <div className="w-fit mr-auto lg:m-0">
-            <ProjectCard
-              projectName="The Blog"
-              description="Take a peek into my what I've been learning."
-              demoLink="https://blog.willjoseph.xyz"
-              repoLink="https://github.com/programmergeek/the-blog"
-            />
+      <div className={styles['sub-container']}>
+        <About />
+        <section className="mt-3" id="Projects">
+          <h1 className="font-sourceCodepro italic font-semibold text-3xl my-5 text-center">
+            Projects
+          </h1>
+          <div className="flex flex-col lg:flex-row justify-center gap-10 lg:flex-wrap">
+            <div className="w-fit mr-auto">
+              <ProjectCard
+                projectName="The Blog"
+                description="Take a peek into my what I've been learning."
+                demoLink="https://blog.willjoseph.xyz"
+                repoLink="https://github.com/programmergeek/the-blog"
+                />
+            </div>
+            <div className="w-fit ml-auto">
+              <ProjectCard
+                reverse
+                projectName="The Blog"
+                description="Take a peek into my what I've been learning."
+                demoLink="https://blog.willjoseph.xyz"
+                repoLink="https://github.com/programmergeek/the-blog"
+                />
+            </div>
+            <div className="w-fit mr-auto">
+              <ProjectCard
+                projectName="The Blog"
+                description="Take a peek into my what I've been learning."
+                demoLink="https://blog.willjoseph.xyz"
+                repoLink="https://github.com/programmergeek/the-blog"
+                />
+            </div>
           </div>
-          <div className="w-fit ml-auto lg:m-0">
-            <ProjectCard
-              reverse
-              projectName="The Blog"
-              description="Take a peek into my what I've been learning."
-              demoLink="https://blog.willjoseph.xyz"
-              repoLink="https://github.com/programmergeek/the-blog"
-            />
-          </div>
-          <div className="w-fit mr-auto lg:m-0">
-            <ProjectCard
-              projectName="The Blog"
-              description="Take a peek into my what I've been learning."
-              demoLink="https://blog.willjoseph.xyz"
-              repoLink="https://github.com/programmergeek/the-blog"
-            />
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }
