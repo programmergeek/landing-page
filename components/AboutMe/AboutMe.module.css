@@ -1,0 +1,69 @@
+#content{
+    display: grid;
+    grid-template-areas: 
+    "about_me about_me"
+    "avatar avatar"
+    "skills skills"
+    "content_aboutme content_aboutme"
+    ;
+    
+}
+
+#avatar > img{
+    margin-left: auto;
+    margin-right: auto ;
+}
+
+#aboutMe{
+    grid-area: about_me;
+}
+
+#avatar{
+    grid-area: avatar;
+}
+
+#skills{
+    grid-area: skills;
+}
+
+#content_aboutme{
+    grid-area: content_aboutme;
+}
+
+
+@media only screen and (min-width: 375px) {
+    #content{
+        display: grid;
+        grid-template-areas: 
+        "about_me about_me"
+        "avatar skills"
+        "content_aboutme content_aboutme"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 15% auto auto;
+    }
+}
+
+@media only screen and  (min-width: 540px ){
+    #content{
+        grid-template-areas: 
+        "about_me about_me"
+        "avatar skills"
+        "avatar content_aboutme"
+        ;
+        grid-template-rows: 15% 40% auto;
+    }
+}
+
+@media only screen and  (min-width: 540px ) and (max-width: 767px) {
+    #avatar > img{
+        width: 250px;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1215px) {
+    #content{
+        grid-template-rows: 15% 32% auto;
+    }
+}

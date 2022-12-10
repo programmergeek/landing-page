@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Accent, Card, HeroBanner, IconButton, Navbar, ProjectCard, Tags } from '../components'
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import styles from '../styles/Home.module.css'
-import { About } from '../components/About';
+import { About } from '../components/AboutMe/About';
 
 const Home: NextPage = () => {
   return (
