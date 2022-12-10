@@ -32,7 +32,7 @@ export const NavigationWidget: React.FC = () => {
         } rounded-full`}
       >
         <ul className="font-sourceCodePro absolute left-28 top-20 font-semibold">
-          {['About Me', 'Projects', 'Skills', 'Contact Me'].map((value) => (
+          {['About Me', 'Projects', 'Contact Me'].map((value) => (
             <li className={`${isOpen ? "" : "hidden"} py-1`}>
                 <a href={`#${value}`}>
                     {value}

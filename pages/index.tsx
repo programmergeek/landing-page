@@ -44,16 +44,6 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      <section id="Skills" className="relative">
-        <h1 className="font-sourceCodepro italic font-semibold text-3xl my-5 text-center">
-          Skills
-        </h1>
-        <div>
-          {
-            // TO DO: create icon components for javascript, typescript, nextjs, html, css, tailwindcss, react
-          }
-        </div>
-      </section>
     </div>
   );
 }
