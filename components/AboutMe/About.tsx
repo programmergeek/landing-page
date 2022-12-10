@@ -5,7 +5,7 @@ import styles from './AboutMe.module.css'
 export const About: React.FC = () => {
     return (
       <div>
-        <Card className=" relative mt-3 mx-1.5">
+        <Card className="relative">
           <Accent className="absolute bottom-3 right-3 lg:bottom-6 lg:right-6 transform md:scale-150 lg:scale-[2.5]" />
           <Accent className="absolute top-3 left-3 lg:top-6 lg:left-6 -rotate-180 transform md:scale-150 lg:scale-[2.5]" />
           <div id={styles.content} className="w-full sm:w-10/12 md:w-9/12 mx-auto lg:w-7/12 2xl:w-6/12">
