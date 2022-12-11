@@ -5,6 +5,7 @@ import { Card } from '../Cards'
 import styles from './ContactMe.module.css'
 
 type Inputs = {
+    name:string,
     email: string,
     message: string
 }
@@ -27,14 +28,20 @@ export const ContactMe: React.FC = () => {
             </div>
             <div id={styles.form} className='w-full'>
                 <form  onSubmit={handleSubmit(onSubmit)} className='mt-5 lg:w-11/12 lg:ml-auto'>
-                    <div className='flex flex-col gap-5'>
-                        <div>
-                            <input placeholder='email' className='focus:outline-none w-full rounded-md border-2 p-2 font-roboto bg-background border-green-300 h-9' type="text" {...register("email", {required: true, pattern:/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/})} />
-                            {errors.email && <span className='text-sm text-red-600 font-semibold italic font-roboto'>Please enter a valid email address</span>}
+                    <div className='flex flex-col gap-3'>
+                        <div className='grid grid-cols-2 gap-3'>
+                            <div>
+                                <input placeholder='name' className='focus:outline-none w-full rounded-md border-2 p-2 font-roboto bg-background border-green-300 h-9' type="text" {...register("name", {required: true})} />
+                                {errors.name && <span className='text-sm text-red-600 font-roboto'>Please enter your name</span>}
+                            </div>
+                            <div>
+                                <input placeholder='email' className='focus:outline-none w-full rounded-md border-2 p-2 font-roboto bg-background border-green-300 h-9' type="text" {...register("email", {required: true, pattern:/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/})} />
+                                {errors.email && <span className='text-sm text-red-600 font-roboto'>Please enter a valid email address</span>}
+                            </div>
                         </div>
                         <div>
-                            <textarea placeholder='message' className='focus:outline-none w-full rounded-md border-2 p-2 font-roboto bg-background border-green-300' id="" cols={30} rows={10} {...register("message", {required: true, minLength: 15, maxLength: 300})} ></textarea>
-                            {errors.message && <span className='text-sm text-red-600 font-semibold italic font-roboto'>Please leave a message between 15 and 300 characters long</span>}
+                            <textarea placeholder='message' className='focus:outline-none w-full rounded-md border-2 p-2 font-roboto bg-background border-green-300 resize-none' id=""  cols={30} rows={10} {...register("message", {required: true, minLength: 15, maxLength: 300})} ></textarea>
+                            {errors.message && <span className='text-sm text-red-600 font-roboto'>Please leave a message between 15 and 300 characters long</span>}
                         </div>
                     </div>
                     <PrimaryButton>Send Message</PrimaryButton>
