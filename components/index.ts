@@ -1,6 +1,6 @@
 export * from './NavigationBar'
 export * from './Buttons'
-export * from './Cards'
+export * from './Cards/Cards'
 export * from './HeroBanner'
 export * from './Accent'
 export * from './Tags'

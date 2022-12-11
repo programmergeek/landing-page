@@ -1,0 +1,15 @@
+.card-sm{
+    max-width: 350px;
+}
+
+.card-md{
+    max-width: 540px;
+}
+
+.card-lg{
+    max-width: 780px;
+}
+
+.card-full{
+    width: 100%;
+}
