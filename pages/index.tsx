@@ -14,8 +14,9 @@ const Home: NextPage = () => {
       <div className={styles['sub-container']}>
         <About />
         <Projects />
-        <ContactMe />
       </div>
+        <ContactMe />
+        <div className='bg-green-400 text-center font-sourceCodePro py-3'>Made by a local internet nerd 💻</div>
     </div>
   );
 }

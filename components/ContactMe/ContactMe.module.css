@@ -1,0 +1,32 @@
+#contact-me{
+    grid-template-areas: 
+    "header"
+    "message"
+    "form";
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#header{
+    grid-area: header;
+}
+
+#messge{
+    grid-area: messge;
+}
+
+#form{
+    grid-area: form;
+}
+
+@media screen and (min-width: 780px) {
+    #contact-me{
+        grid-template-areas: 
+        "header header"
+        "message form";
+        grid-template-columns: 50% auto;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+}
