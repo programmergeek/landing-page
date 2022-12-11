@@ -27,7 +27,7 @@ type Props = {
 // accepts a prop called classname to extend the styles of the component.
 const Button: React.FC<ButtonProps> = ({...props}) => {
     return (
-        <button className={`${props.className} rounded-full px-4 py-2 italic`}> 
+        <button className={`${props.className} rounded-md px-4 py-2`}> 
             {props.href ? (
                 <a href={props.href} target={props.blank ? "_blank": undefined} className="flex">
                     <span className={`${props.icon ? ' block mr-3': 'hidden'}`}>
@@ -53,15 +53,15 @@ const Button: React.FC<ButtonProps> = ({...props}) => {
 }
 
 export const PrimaryButton: React.FC<Props> = ({...props}) => {
-    return <Button icon={props.icon} href={props.href} blank={props.blank} className='font-roboto font-semibold border bg-black text-white'> {props.children} </Button>
+    return <Button icon={props.icon} href={props.href} blank={props.blank} className='font-roboto font-semibold bg-green-500 text-white'> {props.children} </Button>
 }
 
 export const SecondaryButton:React.FC<Props> = ({...props}) => {
-    return <Button icon={props.icon} href={props.href} blank={props.blank} className='border-2 border-black font-sourceCodePro bg-transparent font-semibold'>{props.children}</Button>
+    return <Button icon={props.icon} href={props.href} blank={props.blank} className='border-2 border-green-500 text-green-500 font-roboto bg-transparent font-semibold'>{props.children}</Button>
 }
 
 export const TertiaryButton:React.FC<Props> = ({...props}) => {
-    return <Button icon={props.icon} href={props.href} blank={props.blank} className='font-sourceCodePro not-italic font-semibold'>{props.children}</Button>
+    return <Button icon={props.icon} href={props.href} blank={props.blank} className='font-roboto'>{props.children}</Button>
 }
 
 export const IconButton: React.FC<iconProps> = ({...props}) => {
@@ -69,7 +69,7 @@ export const IconButton: React.FC<iconProps> = ({...props}) => {
       <a href={props.href} target={props.blank ? "_blank" : undefined}>
         <div className="flex flex-col w-fit">
           <div className="flex justify-center">
-            <button className="rounded-full p-2 md:p-3 bg-black w-fit">
+            <button className="rounded-full p-2 md:p-3 bg-green-400 w-fit">
               {props.icon}
             </button>
           </div>
