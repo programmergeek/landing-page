@@ -15,5 +15,5 @@ type Props = {
  * format <<bg-[#COLOUR_CODE]>> 
  */
 export const Tags: React.FC<Props> = ({...props}) => {
-    return <div className={`font-roboto italic ${props.textColour ? props.textColour: 'text-green-800'} ${props.backgroundColour ? props.backgroundColour: "bg-green-400"} ${props.className} w-fit font-semibold text-[10px] md:text-xs px-4 py-1 rounded-sm`}>{props.children}</div>
+    return <div className={`font-roboto italic ${props.textColour ? props.textColour: 'text-green-900'} ${props.backgroundColour ? props.backgroundColour: "bg-green-300"} ${props.className} w-fit font-semibold text-[10px] md:text-xs px-4 py-1 rounded-sm`}>{props.children}</div>
 }
