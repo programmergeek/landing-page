@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { PrimaryButton, SecondaryButton } from "../Buttons";
 import styles from './Cards.module.css'
 import { Tags } from "../Tags";
@@ -30,11 +30,14 @@ export const Card: React.FC<Props> = ({ ...props }) => {
 };
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ ...props }) => {
+
+  const [mouseHover, updateMouseHover] = useState<boolean>(false)
+
     return (
-      <div className={`${styles[`card-${props.size? props.size: "md"}`]} rounded-md relative`}>
+      <div className={`${styles[`card-${props.size? props.size: "md"}`]} rounded-md relative`} onMouseEnter={() => updateMouseHover(true)} onMouseLeave={() => updateMouseHover(false)}>
         <img src={props.thumbnail} className="rounded-xl h-[500px]" alt="" />
-        <div className="w-full h-full rounded-xl bg-black absolute top-0 opacity-50"></div>
-        <div className="absolute top-0 h-full w-full">
+        <div className={`w-full h-full rounded-xl bg-black absolute top-0 opacity-50 ${mouseHover? "": "hidden"}`}></div>
+        <div className={`absolute top-0 h-full w-full ${mouseHover? "": "hidden"}`}>
           <div className="w-fit h-fit mt-5 lg:mt-36 mx-auto">
             <header className="text-3xl text-white text-center font-roboto"> {props.title} </header>
             <p className="text-white text-center font-roboto my-5"> {props.description} </p>
