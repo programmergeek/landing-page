@@ -1,12 +1,11 @@
 import React from 'react'
 import { ProjectCard } from '../Cards'
+import { Header } from '../Header'
 
 export const Projects: React.FC = () => {
     return(
         <section className="mt-3" id="Projects">
-          <h1 className="font-sourceCodepro italic font-semibold text-3xl my-5 text-center">
-            Projects
-          </h1>
+          <Header>Projects</Header>
           <div className="flex flex-col lg:flex-row justify-center gap-10 lg:gap-14 lg:flex-wrap">
             <div className="w-fit mr-auto 2xl:m-0">
               <ProjectCard
