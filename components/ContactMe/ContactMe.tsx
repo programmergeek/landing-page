@@ -15,7 +15,7 @@ export const ContactMe: React.FC = () => {
     const onSubmit: SubmitHandler<Inputs> = data => console.log(data.message)
 
     return (
-        <section id={styles['contact-me']} className='grid bg-green-100 w-full mx-auto mt-10 py-5 relative'>
+        <section id={styles['contact-me']} className='grid bg-green-100 w-full mx-auto mt-10 py-24 relative'>
             <div id={styles.header} className='w-fit mx-auto relative'>
                 <h1 className='z-20 font-roboto text-3xl font-semibold text-center lg:mb-11 mb-5 text-green-700'>Get in touch</h1>
                 <div className='bg-green-500 w-[103%] h-3 absolute top-5 z-0 opacity-[30%]'></div>
