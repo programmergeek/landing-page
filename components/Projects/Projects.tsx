@@ -22,7 +22,7 @@ export const Projects: React.FC = () => {
                 />
                 <ProjectCard
                 title="The Blog"
-                description="Take a peek into my what I've been learning."
+                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, perspiciatis aliquid velit, reprehenderit esse placeat eius iusto consequuntur corporis culpa accusantium facere laborum tempore laboriosam iure autem doloribus dolor vitae."
                 links={{
                   repo: "https://github.com/programmergeek/the-blog",
                   project: "https://blog.willjoseph.xyz"
