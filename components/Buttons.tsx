@@ -13,7 +13,8 @@ type iconProps = {
     style: "solid" | "outline",
     label?: string,
     href?: string,
-    blank?: boolean
+    blank?: boolean,
+    onClick: () => void
 }
 
 type Props = {
@@ -69,7 +70,7 @@ export const IconButton: React.FC<iconProps> = ({...props}) => {
       <a href={props.href} target={props.blank ? "_blank" : undefined}>
         <div className="flex flex-col w-fit">
           <div className="flex justify-center">
-            <button className="rounded-full p-2 md:p-3 bg-green-400 w-fit">
+            <button className="rounded-full p-2 md:p-3 bg-green-400 w-fit" onClick={props.onClick}>
               {props.icon}
             </button>
           </div>
@@ -85,7 +86,7 @@ export const IconButton: React.FC<iconProps> = ({...props}) => {
       <a href={props.href} target={props.blank ? "_blank" : undefined}>
         <div className="flex flex-col w-fit">
           <div className="flex justify-center">
-            <button className="rounded-full p-2 md:p-3 border-2 border-black bg-transparent">
+            <button className="rounded-full p-2 md:p-3 border-2 border-black bg-transparent" onClick={props.onClick}>
               {props.icon}
             </button>
           </div>

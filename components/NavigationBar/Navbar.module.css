@@ -1,0 +1,29 @@
+.slide-in{
+    animation: slide 200ms forwards;
+}
+
+.link-slide-in{
+    animation: link-slide-in 500ms forwards;
+    animation-duration: --p-duration-200;
+}
+
+@keyframes slide {
+    0% {
+        top: -100vh;
+    }
+
+    100%{
+        top: 0;
+    }
+}
+
+@keyframes link-slide-in {
+    0%{
+        opacity: 0%;
+        margin-top: 50px;
+    }
+    
+    100%{
+        opacity: 100%;
+    }
+}

@@ -1,4 +1,4 @@
-export * from './NavigationBar'
+export * from './NavigationBar/Navbar'
 export * from './Buttons'
 export * from './Cards/Cards'
 export * from './HeroBanner'
