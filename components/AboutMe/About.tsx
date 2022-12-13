@@ -4,7 +4,7 @@ import styles from './AboutMe.module.css'
 
 export const About: React.FC = () => {
     return (
-      <section className='mt-20 mb-24 md:mb-52'>
+      <section id='aboutMe' className='mt-20 mb-24 md:mb-52'>
           <Header>About Me</Header>
           <div id={styles.content}>
             <div className='place-self-center md:place-self-end'>

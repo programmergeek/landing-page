@@ -5,7 +5,7 @@ import styles from './Projects.module.css'
 
 export const Projects: React.FC = () => {
     return(
-        <section className="mt-3" id="Projects">
+        <section className="mt-3" id="projects">
           <Header>Projects</Header>
           <div className="flex flex-col gap-6">
             <div className={styles['project-row']}>

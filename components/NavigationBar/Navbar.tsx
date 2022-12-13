@@ -7,7 +7,7 @@ export const Navbar: React.FC = () => {
     const [isHidden, updateIsHidden] = useState<boolean>(true)
 
     return (
-        <div className={`fixed w-full h-full grid grid-cols-1 z-50 ${isHidden ? "": ""}`}>
+        <div className={`fixed w-full h-full grid grid-cols-1 z-50 ${isHidden ? "delay-500 h-10 w-10": ""}`}>
             <div className='fixed top-3 right-3 z-10'>
                 <IconButton 
                 icon={ isHidden ? <HiMenu className='w-7 h-7' /> : <HiX className='w-7 h-7' />} 
