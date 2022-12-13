@@ -14,7 +14,6 @@ export const Navbar: React.FC = () => {
                 style="outline"
                 onClick={() => {
                     updateIsHidden(!isHidden)
-                    console.log(isHidden)
                 }}
                 />
             </div>
