@@ -1,7 +1,6 @@
 import React from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { PrimaryButton, SecondaryButton } from '../Buttons'
-import { Card } from '../Cards/Cards'
 import styles from './ContactMe.module.css'
 
 type Inputs = {

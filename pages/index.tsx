@@ -1,10 +1,6 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import { Accent, Card, ContactMe, HeroBanner, IconButton, Navbar, ProjectCard, Projects, Tags } from '../components'
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { ContactMe, HeroBanner, Navbar, Projects, About} from '../components'
 import styles from '../styles/Home.module.css'
-import { About } from '../components/AboutMe/About';
 
 const Home: NextPage = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Tags, Accent, Card, Header} from '..'
+import { Header} from '..'
 import styles from './AboutMe.module.css'
 
 export const About: React.FC = () => {

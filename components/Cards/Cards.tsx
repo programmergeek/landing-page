@@ -3,11 +3,6 @@ import { PrimaryButton, SecondaryButton } from "../Buttons";
 import styles from './Cards.module.css'
 import { Tags } from "../Tags";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string
-};
-
 type ProjectCardProps = {
   title:string,
   description: string,
@@ -19,14 +14,6 @@ type ProjectCardProps = {
     project?: string,
     blogPost?: string
   }
-};
-
-export const Card: React.FC<Props> = ({ ...props }) => {
-  return (
-    <div className={`${props.className} min-h-[150px] p-5 bg-card-paper rounded-md border-2 border-black shadow-hardShadowLeft`}>
-      {props.children}
-    </div>
-  );
 };
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ ...props }) => {
