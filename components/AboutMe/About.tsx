@@ -9,13 +9,13 @@ export const About: React.FC = () => {
             <div className='place-self-center bg-green-400 rounded-full'>
               <img src="/images/avatar.png" className='rounded-full w-72' alt="" />
             </div>
-            <p className='place-self-center mt-5 md:px-5 w-full'>
+            <div className='place-self-center mt-5 md:px-5 w-full'>
               <Header>Hey There!</Header>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
               Optio doloremque laboriosam consequuntur voluptatem pariatur sapiente alias doloribus 
               culpa labore fugit itaque tempore, exercitationem fuga adipisci aliquid nam? 
               Quisquam, deserunt sed!
-            </p>
+            </div>
           </div>
           <div className='mt-5'>
             <Header>Skills</Header>
