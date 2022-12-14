@@ -11,36 +11,36 @@ export const Projects: React.FC = () => {
             <div className={styles['project-row']}>
               <ProjectCard
                 title="The Blog"
-                description="Take a peek into my what I've been learning."
+                description="A simple blog built on Next.js, typescript and contentful CMS. A repository of the things I am learning and my mistakes along the way."
                 links={{
                   repo: "https://github.com/programmergeek/the-blog",
                   project: "https://blog.willjoseph.xyz"
                 }}
                 size="full"
-                tags={['React', 'RestAPI', 'Contentful', 'Tailwind CSS']}
+                tags={['React', 'Next.js', 'TypeScript','RestAPI', 'Contentful', 'Tailwind CSS']}
                 thumbnail="https://picsum.photos/1200/500"
                 />
                 <ProjectCard
-                title="The Blog"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, perspiciatis aliquid velit, reprehenderit esse placeat eius iusto consequuntur corporis culpa accusantium facere laborum tempore laboriosam iure autem doloribus dolor vitae."
+                title="Portfolio"
+                description="A snapshot of who I am, my technical skills and the projects I have been working on."
                 links={{
-                  repo: "https://github.com/programmergeek/the-blog",
-                  project: "https://blog.willjoseph.xyz"
+                  repo: "https://github.com/programmergeek/landing-page",
+                  project: "https://willjoseph.xyz"
                 }}
-                tags={['React', 'RestAPI', 'Contentful', 'Tailwind CSS']}
+                tags={['React', 'Next.js', 'TypeScript', 'Tailwind CSS']}
                 thumbnail="https://picsum.photos/700/500"
                 size='full'
                 />
             </div>
             <div className={styles['project-row-reverse']}>
               <ProjectCard
-                title="The Blog"
-                description="Take a peek into my what I've been learning."
+                title="Pintrest Clone"
+                description="A pintrest clone that mirorrs the core function and abilities of the original."
                 links={{
                   repo: "https://github.com/programmergeek/the-blog",
                   project: "https://blog.willjoseph.xyz"
                 }}
-                tags={['React', 'RestAPI', 'Contentful', 'Tailwind CSS']}
+                tags={['React', 'Next.js', 'TypeScript','RestAPI', 'Firebase', 'Tailwind CSS']}
                 thumbnail="https://picsum.photos/700/500"
                 size='full'
                 />

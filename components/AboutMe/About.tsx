@@ -1,20 +1,48 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Header} from '..'
 import styles from './AboutMe.module.css'
 
 export const About: React.FC = () => {
+    const [isExpanded, updateIsExpanded] = useState<boolean>(false)
+
+    const content = {
+      mini: (
+        <div className='text-xl'>
+          Hey, I'm Will and I'm passionate about building things for the web. I started coding and learning about software development in highschool. 
+          I was obsessed with making making cool animations in Scratch, I litterally spent any and all time I could doing just that. 
+          I eventually moved on to making programs in java...
+        </div>
+      ),
+      expanded: (
+        <div className='text-xl'>
+          Hey, I'm Will and I'm passionate about building things for the web. I started coding and learning about software development in highschool. 
+          I was obsessed with making making cool animations in Scratch, I litterally spent any and all time I could doing just that. 
+          I eventually moved on to making programs in java, making scripts with python and a bit of game development with C#.
+          <br/>
+          <br/>
+          Recently I've become really interesting in developing for the web. That's where everything is going now. I picked up some HTML, CSS and 
+          JavaScript during the pandemic as something to keep myself busy and I loved it. I made a couple weird projects like a page that opens a new page
+          leading to somewhere on the internet if you clicked on a button. As I learned more about web dev I learned about frameworks like Angular, Vue and React.
+          I tried them and enjoyed working with React the most.
+          <br/>
+          <br/>
+          I'm now looking for a front end dev position to start my career and learn more.
+        </div>
+      )
+    }
+
     return (
       <section id='aboutMe' className='mx-5 md:mx-10 xl:mx-72 md:h-[94vh] grid place-content-center'>
           <div id={styles.content} className="mt-16 mb-16">
-            <div className='place-self-center bg-green-400 rounded-full'>
-              <img src="/images/avatar.png" className='rounded-full w-72' alt="" />
+            <div className='place-self-center bg-green-400 rounded-full grid '>
+              <img src="/images/avatar.png" className='rounded-full w-96 place-self-center' alt="" />
             </div>
             <div className='place-self-center mt-5 md:px-5 w-full'>
               <Header>Hey There!</Header>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Optio doloremque laboriosam consequuntur voluptatem pariatur sapiente alias doloribus 
-              culpa labore fugit itaque tempore, exercitationem fuga adipisci aliquid nam? 
-              Quisquam, deserunt sed!
+              {isExpanded ? content.expanded : content.mini}
+              <div className='w-full text-green-500 cursor-pointer mt-5' onClick={() => updateIsExpanded(!isExpanded)}>
+                {isExpanded ? 'Minimize' : 'Expand'}
+              </div>
             </div>
           </div>
           <div className='mt-5'>

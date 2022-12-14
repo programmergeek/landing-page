@@ -21,9 +21,9 @@ export const ContactMe: React.FC = () => {
                     <div className='bg-green-500 w-[103%] h-3 absolute top-5 z-0 opacity-[30%]'></div>
                 </div>
                 <div id={styles.message} className='md:mr-5'>
-                    <img src="/images/avatar.png" className='rounded-full w-52 mx-auto z-20' alt="" />
+                    <img src="/images/messenger.png" className='w-52 mx-auto z-20' alt="" />
                     <div className='font-roboto mt-10'>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, perspiciatis aliquid velit, reprehenderit esse placeat eius iusto consequuntur corporis culpa accusantium facere laborum tempore laboriosam iure autem doloribus dolor vitae.
+                        Hey, thanks for coming by. If you think think I'll be a good fit for your team or you just would like to get to know me then leave a message, meeting new people is always fun. Hope ot hear from you soon.  
                     </div>
                 </div>
                 <div id={styles.form} className='w-full'>
