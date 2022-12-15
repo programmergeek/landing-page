@@ -11,7 +11,12 @@ type Inputs = {
 
 export const ContactMe: React.FC = () => {
     const {register, handleSubmit, watch, formState: {errors}} = useForm<Inputs>()
-    const onSubmit: SubmitHandler<Inputs> = data => console.log(data.message)
+    const onSubmit: SubmitHandler<Inputs> = async (data) => {
+        await fetch('/api/messages',{
+            method: 'POST',
+            body: JSON.stringify(data)
+        })
+    }
 
     return (
         <section id='contact'>
