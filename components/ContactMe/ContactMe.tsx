@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { PrimaryButton, SecondaryButton } from '../Buttons'
 import styles from './ContactMe.module.css'
+import { HiOutlineXCircle } from 'react-icons/hi'
 
 type Inputs = {
     name:string,
@@ -11,10 +12,13 @@ type Inputs = {
 
 export const ContactMe: React.FC = () => {
     const {register, handleSubmit, watch, formState: {errors}} = useForm<Inputs>()
+    const [showMessage, updateShowMessage] = useState<boolean>(false)
     const onSubmit: SubmitHandler<Inputs> = async (data) => {
         await fetch('/api/messages',{
             method: 'POST',
             body: JSON.stringify(data)
+        }).then(() => {
+            updateShowMessage(true)
         })
     }
 
@@ -32,6 +36,14 @@ export const ContactMe: React.FC = () => {
                     </div>
                 </div>
                 <div id={styles.form} className='w-full'>
+                    <div className={showMessage ? 'bg-green-400 shadow-md lg:w-11/12 p-3 ml-auto rounded-md text-white relative grid grid-cols-2' : 'hidden'}>
+                        <span className='place-self-start'>
+                            Message Sent
+                        </span>
+                        <button  className='place-self-end' onClick={() => updateShowMessage(false)}>
+                            <HiOutlineXCircle className='w-7 h-7'/>
+                        </button>
+                    </div>
                     <form  onSubmit={handleSubmit(onSubmit)} className='mt-5 lg:w-11/12 lg:ml-auto'>
                         <div className='flex flex-col gap-3'>
                             <div className='grid grid-cols-2 gap-3'>
