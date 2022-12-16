@@ -32,7 +32,7 @@ export const ContactMe: React.FC = () => {
                 </div>
                 <div id={styles.message} className='md:mr-5 mt-24'>
                     <div className='font-roboto mt-10'>
-                        Hey, thanks for coming by. If you think think I'll be a good fit for your team or you just would like to get to know me then leave a message, meeting new people is always fun. Hope ot hear from you soon.  
+                        Hey, thanks for coming by. If you think think I&apos;ll be a good fit for your team or you just would like to get to know me then leave a message, meeting new people is always fun. Hope ot hear from you soon.  
                     </div>
                     <div className='flex gap-10 mt-5'>
                         <IconButton style='outline' icon={ <HiOutlineMail className='w-7 h-7' /> } href='mailto: contact@willjoseph.xyz' />

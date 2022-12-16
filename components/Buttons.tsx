@@ -30,7 +30,7 @@ const Button: React.FC<ButtonProps> = ({...props}) => {
     return (
         <button className={`${props.className} rounded-md px-4 py-2`}> 
             {props.href ? (
-                <a href={props.href} target={props.blank ? "_blank": undefined} className="flex">
+                <a href={props.href} target={props.blank ? "_blank": undefined} rel='noreferrer' className="flex">
                     <span className={`${props.icon ? ' block mr-3': 'hidden'}`}>
                         {props.icon} 
                     </span>
@@ -67,7 +67,7 @@ export const TertiaryButton:React.FC<Props> = ({...props}) => {
 
 export const IconButton: React.FC<iconProps> = ({...props}) => {
     return props.style === "solid" ? (
-      <a href={props.href} target={props.blank ? "_blank" : undefined}>
+      <a href={props.href} target={props.blank ? "_blank" : undefined} rel='noreferrer'>
         <div className="flex flex-col w-fit">
           <div className="flex justify-center">
             <button className="rounded-full p-2 md:p-3 bg-green-400 w-fit" onClick={props.onClick}>
@@ -83,7 +83,7 @@ export const IconButton: React.FC<iconProps> = ({...props}) => {
         </div>
       </a>
     ) : (
-      <a href={props.href} target={props.blank ? "_blank" : undefined}>
+      <a href={props.href} target={props.blank ? "_blank" : undefined} rel='noreferrer'>
         <div className="flex flex-col w-fit">
           <div className="flex justify-center">
             <button className="rounded-full p-2 md:p-3 border-2 border-black bg-transparent" onClick={props.onClick}>
