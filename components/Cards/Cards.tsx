@@ -22,7 +22,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ ...props }) => {
   const [mouseHover, updateMouseHover] = useState<boolean>(false)
 
     return (
-      <div className={`${styles[`card-${props.size? props.size: "md"}`]} ${props.className} rounded-md relative overflow-hidden`} onMouseEnter={() => updateMouseHover(true)} onMouseLeave={() => updateMouseHover(false)}>
+      <div className={`${styles[`card-${props.size? props.size: "md"}`]} ${props.className} rounded-xl relative overflow-hidden`} onMouseEnter={() => updateMouseHover(true)} onMouseLeave={() => updateMouseHover(false)}>
         <div className="overflow-hidden w-12/12 h-[400px]" style={{backgroundImage: `url(${props.thumbnail})`, backgroundPosition: "center center", backgroundRepeat: "no-repeat"}}></div>
         <div className={`w-full h-full rounded-xl bg-black absolute top-0 opacity-50 ${mouseHover? "": "hidden"}`}></div>
         <div className={`absolute top-0 h-full w-full ${mouseHover? "": "hidden"} grid`}>
