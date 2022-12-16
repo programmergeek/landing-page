@@ -31,7 +31,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ ...props }) => {
             <div className="max-w-[500px] flex flex-wrap gap-3 justify-center mb-5 mx-auto">
               {
                 props.tags.map((tag) => (
-                  <Tags>{tag}</Tags>
+                  <Tags key={tag}>{tag}</Tags>
                 ))
               }
             </div>

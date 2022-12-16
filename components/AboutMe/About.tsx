@@ -79,7 +79,7 @@ export const About: React.FC = () => {
                     image: 'tailwindcss.webp',
                   }
                 ].map((skill) => (
-                  <div className='flex flex-col'>
+                  <div key={skill.title} className='flex flex-col'>
                     <img src={`/images/${skill.image}`} className='w-12 mx-auto' alt={skill.title} />
                     <p className='text-sm font-roboto text-center my-2'> {skill.title} </p>
                   </div>
