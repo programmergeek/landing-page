@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import { PrimaryButton, SecondaryButton } from '../Buttons'
+import { IconButton, PrimaryButton, SecondaryButton } from '../Buttons'
 import styles from './ContactMe.module.css'
-import { HiOutlineXCircle } from 'react-icons/hi'
+import { HiOutlineXCircle, HiOutlineMail } from 'react-icons/hi'
+import { FaGithubAlt, FaLinkedinIn } from 'react-icons/fa'
 
 type Inputs = {
     name:string,
@@ -29,10 +30,14 @@ export const ContactMe: React.FC = () => {
                     <h1 className='z-20 font-roboto text-3xl font-semibold text-center lg:mb-11 mb-5 text-green-700'>Get in touch</h1>
                     <div className='bg-green-500 w-[103%] h-3 absolute top-5 z-0 opacity-[30%]'></div>
                 </div>
-                <div id={styles.message} className='md:mr-5'>
-                    <img src="/images/messenger.png" className='w-52 mx-auto z-20' alt="" />
+                <div id={styles.message} className='md:mr-5 mt-24'>
                     <div className='font-roboto mt-10'>
                         Hey, thanks for coming by. If you think think I'll be a good fit for your team or you just would like to get to know me then leave a message, meeting new people is always fun. Hope ot hear from you soon.  
+                    </div>
+                    <div className='flex gap-10 mt-5'>
+                        <IconButton style='outline' icon={ <HiOutlineMail className='w-7 h-7' /> } href='mailto: contact@willjoseph.xyz' />
+                        <IconButton style='outline' icon={<FaGithubAlt className='w-7 h-7' />} href='https://github.com/programmergeek' />
+                        <IconButton style='outline' icon={ <FaLinkedinIn className='w-7 h-7' /> } href='https://www.linkedin.com/in/thato-will-joseph-b0aa54219/'/>
                     </div>
                 </div>
                 <div id={styles.form} className='w-full'>

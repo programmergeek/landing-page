@@ -14,7 +14,7 @@ type iconProps = {
     label?: string,
     href?: string,
     blank?: boolean,
-    onClick: () => void
+    onClick?: () => void
 }
 
 type Props = {
