@@ -1,10 +1,15 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
 import { ContactMe, HeroBanner, Navbar, Projects, About} from '../components'
 import { HiChevronDoubleDown } from 'react-icons/hi'
 
 const Home: NextPage = () => {
   return (
     <div className="">
+      <Head>
+        <title>Thato Will Joseph</title>
+        <link rel='icon' type='image/x-icon' href='/images/favicon.png' />
+      </Head>
       <Navbar />
       <About />
       <div className='w-full grid mt-16 sm:m-0'>
