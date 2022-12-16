@@ -19,7 +19,8 @@ export const Projects: React.FC = () => {
                 }}
                 size="full"
                 tags={['React', 'Next.js', 'TypeScript','RestAPI', 'Contentful', 'Tailwind CSS']}
-                thumbnail="https://picsum.photos/1200/500"
+                thumbnail="/images/Blog.png"
+                className='bg-orange-200'
                 />
                 <ProjectCard
                 title="Portfolio"
@@ -29,34 +30,22 @@ export const Projects: React.FC = () => {
                   project: "https://willjoseph.xyz"
                 }}
                 tags={['React', 'Next.js', 'TypeScript', 'Tailwind CSS']}
-                thumbnail="https://picsum.photos/700/500"
+                thumbnail="/images/Portfolio.png"
                 size='full'
+                className='bg-gray-100'
                 />
             </div>
-            <div className={styles['project-row-reverse']}>
-              <ProjectCard
-                title="Pintrest Clone"
-                description="A pintrest clone that mirorrs the core function and abilities of the original."
-                links={{
-                  repo: "https://github.com/programmergeek/the-blog",
-                  project: "https://blog.willjoseph.xyz"
-                }}
-                tags={['React', 'Next.js', 'TypeScript','RestAPI', 'Firebase', 'Tailwind CSS']}
-                thumbnail="https://picsum.photos/700/500"
-                size='full'
-                />
-              <ProjectCard
-                title="The Blog"
-                description="Take a peek into my what I've been learning."
-                links={{
-                  repo: "https://github.com/programmergeek/the-blog",
-                  project: "https://blog.willjoseph.xyz"
-                }}
-                size="full"
-                tags={['React', 'RestAPI', 'Contentful', 'Tailwind CSS']}
-                thumbnail="https://picsum.photos/1200/500"
-                />
-            </div>
+            <ProjectCard
+              title="Pintrest Clone"
+              description="A pintrest clone that mirorrs the core function and abilities of the original."
+              links={{
+                repo: "https://github.com/programmergeek/the-blog",
+              }}
+              tags={['React', 'Next.js', 'TypeScript','RestAPI', 'Firebase', 'Tailwind CSS']}
+              thumbnail="/images/PinterestClone.png"
+              size='full'
+              className='bg-red-100'
+            />
           </div>
         </section>
     )
