@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { ContactMe, Navbar, Projects, About } from "../components";
+import { ContactMe, Navbar, Projects, HeroBanner } from "../components";
 
 const Home: NextPage = () => {
   return (
@@ -19,8 +19,12 @@ const Home: NextPage = () => {
         <title>Thato Will Joseph</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
       </Head>
-      <Navbar />
-      <About />
+      <main className="container mx-auto">
+        <Navbar />
+        <div className="px-3 sm:px-0">
+          <HeroBanner />
+        </div>
+      </main>
     </div>
   );
 };
