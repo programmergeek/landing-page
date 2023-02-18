@@ -7,7 +7,7 @@ export const HeroBanner: React.FC = () => {
       <div className="absolute top-1/2 -translate-y-1/2 ">
         <div className="flex flex-col gap-6">
           <div className="text-4xl md:text-6xl">
-            I'm <span className="font-semibold">Thato Will Joseph</span>
+            I&apos;m <span className="font-semibold">Thato Will Joseph</span>
           </div>
           <div className="md:text-3xl w-11/12">
             A front-end developer, problem solver and life-long learner.
@@ -20,7 +20,7 @@ export const HeroBanner: React.FC = () => {
             <a
               href="https://twitter.com/programergeek"
               target="_blank"
-              referrerPolicy="no-referrer"
+              rel="no-referrer"
             >
               <BsTwitter fontSize={24} />
             </a>
@@ -29,7 +29,7 @@ export const HeroBanner: React.FC = () => {
             <a
               href="https://github.com/programmergeek"
               target="_blank"
-              referrerPolicy="no-referrer"
+              rel="no-referrer"
             >
               <BsGithub fontSize={24} />
             </a>
