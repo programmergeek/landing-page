@@ -16,10 +16,33 @@ export const HeroBanner: React.FC = () => {
       </div>
       <div className="grid grid-cols-2 absolute bottom-4 w-full">
         <span className="flex gap-4 place-content-start">
-          <BsTwitter fontSize={24} />
-          <BsGithub fontSize={24} />
+          <button className="w-fit h-fit rounded-full">
+            <a
+              href="https://twitter.com/programergeek"
+              target="_blank"
+              referrerPolicy="no-referrer"
+            >
+              <BsTwitter fontSize={24} />
+            </a>
+          </button>
+          <button className="w-fit h-fit rounded-full">
+            <a
+              href="https://github.com/programmergeek"
+              target="_blank"
+              referrerPolicy="no-referrer"
+            >
+              <BsGithub fontSize={24} />
+            </a>
+          </button>
         </span>
-        <span className="text-sm place-self-end">contact@willjoseph.xyz</span>
+        <span className="text-sm place-self-end">
+          <a
+            href="mailto:contact@willjoseph.xyz"
+            className="hover:text-accent duration-150"
+          >
+            contact@willjoseph.xyz
+          </a>
+        </span>
       </div>
     </section>
   );

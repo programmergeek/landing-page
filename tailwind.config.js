@@ -13,7 +13,7 @@ module.exports = {
       },
       colors:{
         folderYellow: "#FDB900",
-        accent: "#592905",
+        accent: "#013006",
         "card-paper": "#FFF3E1",
         background: "#FFFCF4"
       },
