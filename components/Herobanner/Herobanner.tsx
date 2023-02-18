@@ -1,7 +1,7 @@
 import React from "react";
 import { BsTwitter, BsGithub } from "react-icons/bs";
 
-export const About: React.FC = () => {
+export const HeroBanner: React.FC = () => {
   return (
     <section className="h-[100vh] w-full relative">
       <div className="absolute top-1/2 -translate-y-1/2 ">
