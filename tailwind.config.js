@@ -14,6 +14,8 @@ module.exports = {
       colors:{
         folderYellow: "#FDB900",
         accent: "#013006",
+        "not-black": "#212121",
+        "not-white": "#f8f8f8",
         "card-paper": "#FFF3E1",
         background: "#FFFCF4"
       },

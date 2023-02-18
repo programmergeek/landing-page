@@ -19,8 +19,8 @@ const Home: NextPage = () => {
         <title>Thato Will Joseph</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
       </Head>
+      <Navbar />
       <main className="container mx-auto">
-        <Navbar />
         <div className="px-3 sm:px-0">
           <HeroBanner />
         </div>
