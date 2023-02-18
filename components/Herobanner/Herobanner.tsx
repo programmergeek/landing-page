@@ -20,7 +20,7 @@ export const HeroBanner: React.FC = () => {
             <a
               href="https://twitter.com/programergeek"
               target="_blank"
-              rel="no-referrer"
+              rel="noreferrer"
             >
               <BsTwitter fontSize={24} />
             </a>
@@ -29,7 +29,7 @@ export const HeroBanner: React.FC = () => {
             <a
               href="https://github.com/programmergeek"
               target="_blank"
-              rel="no-referrer"
+              rel="noreferrer"
             >
               <BsGithub fontSize={24} />
             </a>
