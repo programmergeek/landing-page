@@ -6,3 +6,4 @@ export * from "./Projects/Projects";
 export * from "./ContactMe/ContactMe";
 export * from "./Header";
 export * from "./Herobanner/Herobanner";
+export * from "./AboutMe/AboutMe";
