@@ -32,34 +32,36 @@ export const AboutMe = () => {
           </h1>
           <p className="lg:text-xl">
             {`
-            My first introuction to coding came in the ninth grade. It's a
-            funny story that was fueled by pettiness and some friendly rivalry
-            between a friend and teacher. I just happened to be caught in the
-            middle of it.
+            My first introduction to coding came in the ninth grade. 
+            It's a funny story that was fueled by pettiness and some friendly 
+            rivalry between a friend and a teacher. I just happened to be 
+            caught in the middle of it.
             `}
             <br />
             <br />
             {`
-            To make a long story short, said friend and teacher argued whether or 
-            not it was possible to teach an entrire year's course work within a single 
-            school term (roughly 2 months). My friend argued yes while the teacher 
-            argued no. I ended up being chosen as the lucky geniue pig that would 
-            settle their debate. Spoiler, the teacher won. By the end of the term 
-            I could barely remember what I had learned at the beginning of it. That 
-            was the first time I had ever seen and written code and tried to solve 
-            problems with it. It was fun.
+            To make a long story short, said friend and teacher argued whether
+             or not it was possible to teach an entire year's coursework within a 
+             single school term (roughly two months). My friend argued yes while 
+             the teacher argued no. I was chosen as the lucky guinea pig that would 
+             settle their debate. Spoiler, the teacher won. By the end of the term, 
+             I could barely remember what I had learned at the beginning of it. 
+             That was the first time I had ever seen and written code and tried 
+             to solve problems with it. It was fun.
             `}
             <br />
             <br />
             {`
-            Fast forward a couple years and I haven't stopped coding. I've experminented with 
-            different parts of software engineering, dipped my toes into game development and learning a 
-            bit of C# and C++ while experminenting with unity and unreal engine. I've made a couple web scrappers
-            with python and the list goes on, that is until we reach web development, my latest facination. No matter
-            where you look or how you think about it, more and more things are moving to the web. The most intersting 
-            developments in software and tech are happening through the internet and I want to be part of that. I want 
-            build my career making experiences and creating soluting through the power of the internet and I hope that
-            you will allow me to do that as part of your team.
+            Fast forward a couple of years and I haven't stopped coding. I've experimented 
+            with different parts of software engineering, dipped my toes into game development 
+            and learned a bit of C# and C++ while experimenting with Unity and Unreal Engine. 
+            I've made a couple of web scrapers with python and the list goes on, that is until 
+            we reach web development, my latest fascination. No matter where you look or how you 
+            think about it, more and more things are moving to the web. The most interesting 
+            developments in software and tech are happening through the internet and I want to be 
+            part of that. I want to build my career by making experiences and creating solutions 
+            through the power of the internet and I hope that you will allow me to do that 
+            as part of your team.
             `}
           </p>
         </div>
