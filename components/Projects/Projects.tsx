@@ -45,17 +45,30 @@ export const Projects: React.FC = () => {
 
 type Props = {
   children: React.ReactNode;
+  className?: string;
 };
 
-const Project = ({ ...props }: Props) => {
+type ProjectSubComponents = {
+  Title: typeof Title;
+  Body: typeof Body;
+  Tags: typeof Tags;
+  Tag: typeof Tag;
+};
+
+type ProjectProps = Props & { reversed?: boolean };
+const Project: React.FunctionComponent<ProjectProps> & ProjectSubComponents = (
+  props: ProjectProps
+) => {
   return <div>{props.children}</div>;
 };
 
-Project.Title = ({ ...props }: Props) => {
+const Title = ({ ...props }) => {
   return <h3 className="text-2xl font-semibold mb-2"> {props.children} </h3>;
 };
 
-Project.Body = ({ ...props }: Props) => {
+Project.Title = Title;
+
+const Body = ({ ...props }: Props) => {
   return (
     <p className="bg-not-black rounded-md p-5 text-not-white lg:w-2/3">
       {props.children}
@@ -63,10 +76,16 @@ Project.Body = ({ ...props }: Props) => {
   );
 };
 
-Project.Tags = ({ ...props }: Props) => {
+Project.Body = Body;
+
+const Tags = ({ ...props }: Props) => {
   return <div className="flex gap-5 mt-3"> {props.children} </div>;
 };
 
-Project.Tag = ({ ...props }: Props) => {
+Project.Tags = Tags;
+
+const Tag = ({ ...props }: Props) => {
   return <span className="text-accent">{props.children}</span>;
 };
+
+Project.Tag = Tag;
