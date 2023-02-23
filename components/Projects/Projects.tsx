@@ -32,6 +32,12 @@ export const Projects: React.FC = () => {
           egestas sem nisi vitae mi. Maecenas nec mi sit amet velit dignissim
           lacinia vel nec mauris. Donec non interdum lacus.
         </Project.Body>
+        <Project.Tags>
+          <Project.Tag>HTML</Project.Tag>
+          <Project.Tag>React</Project.Tag>
+          <Project.Tag>TypeScript</Project.Tag>
+          <Project.Tag>Tailwindcss</Project.Tag>
+        </Project.Tags>
       </Project>
     </section>
   );
@@ -55,4 +61,12 @@ Project.Body = ({ ...props }: Props) => {
       {props.children}
     </p>
   );
+};
+
+Project.Tags = ({ ...props }: Props) => {
+  return <div className="flex gap-5 mt-3"> {props.children} </div>;
+};
+
+Project.Tag = ({ ...props }: Props) => {
+  return <span className="text-accent">{props.children}</span>;
 };
