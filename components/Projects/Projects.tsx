@@ -46,9 +46,13 @@ const Project = ({ ...props }: Props) => {
 };
 
 Project.Title = ({ ...props }: Props) => {
-  return <h3 className="text-xl font-semibold mb-2"> {props.children} </h3>;
+  return <h3 className="text-2xl font-semibold mb-2"> {props.children} </h3>;
 };
 
 Project.Body = ({ ...props }: Props) => {
-  return <p> {props.children} </p>;
+  return (
+    <p className="bg-not-black rounded-md p-5 text-not-white lg:w-2/3">
+      {props.children}
+    </p>
+  );
 };
