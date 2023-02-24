@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children } from "react";
 import { ProjectCard } from "../Cards/Cards";
 import { Header } from "../Header";
 import styles from "./Projects.module.css";
@@ -22,7 +22,7 @@ export const Projects: React.FC = () => {
         </Project.Body>
       </Project>
       <div className="bg-[#dadada] h-0.5 w-full rounded-full my-10"></div>
-      <Project>
+      <Project reversed>
         <Project.Title>Project</Project.Title>
         <Project.Body>
           Morbi et aliquet elit. Aliquam ultricies blandit lectus, vitae posuere
@@ -45,7 +45,7 @@ export const Projects: React.FC = () => {
 
 type Props = {
   children: React.ReactNode;
-  className?: string;
+  reversed?: boolean;
 };
 
 type ProjectSubComponents = {
@@ -55,31 +55,61 @@ type ProjectSubComponents = {
   Tag: typeof Tag;
 };
 
-type ProjectProps = Props & { reversed?: boolean };
-const Project: React.FunctionComponent<ProjectProps> & ProjectSubComponents = (
-  props: ProjectProps
+const Project: React.FunctionComponent<Props> & ProjectSubComponents = (
+  props: Props
 ) => {
-  return <div>{props.children}</div>;
+  const children = Children.map(props.children, (child) => {
+    if (React.isValidElement(child)) {
+      return React.cloneElement(child, { reversed: props.reversed } as any);
+    }
+  });
+  return <div>{children}</div>;
 };
 
-const Title = ({ ...props }) => {
-  return <h3 className="text-2xl font-semibold mb-2"> {props.children} </h3>;
+const Title = ({ ...props }: Props) => {
+  return (
+    <h3
+      className={`text-2xl font-semibold mb-2 lg:w-full ${
+        props.reversed ? "text-end" : ""
+      }`}
+    >
+      {props.children}
+    </h3>
+  );
 };
 
 Project.Title = Title;
 
 const Body = ({ ...props }: Props) => {
   return (
-    <p className="bg-not-black rounded-md p-5 text-not-white lg:w-2/3">
-      {props.children}
-    </p>
+    <div
+      className={`flex w-full drop-shadow-2xl ${
+        props.reversed ? "justify-end" : ""
+      }`}
+    >
+      <p
+        className={`bg-not-black rounded-md p-5 text-not-white lg:w-2/3 ${
+          props.reversed ? "text-end" : ""
+        }`}
+      >
+        {props.children}
+      </p>
+    </div>
   );
 };
 
 Project.Body = Body;
 
 const Tags = ({ ...props }: Props) => {
-  return <div className="flex gap-5 mt-3"> {props.children} </div>;
+  return (
+    <div
+      className={`flex w-full gap-5 mt-3 ${
+        props.reversed ? "justify-end" : ""
+      }`}
+    >
+      {props.children}
+    </div>
+  );
 };
 
 Project.Tags = Tags;
