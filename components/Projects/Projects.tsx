@@ -12,18 +12,7 @@ export const Projects: React.FC = () => {
       <Header>Projects</Header>
       <Project>
         <Project.Title>Project</Project.Title>
-        <Project.Body>
-          Morbi et aliquet elit. Aliquam ultricies blandit lectus, vitae posuere
-          mi vestibulum nec. Vestibulum sit amet risus scelerisque sapien
-          rhoncus molestie. Suspendisse ut quam nisi. Phasellus auctor, leo
-          laoreet vestibulum facilisis, tellus ante fringilla velit, eget
-          egestas sem nisi vitae mi. Maecenas nec mi sit amet velit dignissim
-          lacinia vel nec mauris. Donec non interdum lacus.
-        </Project.Body>
-      </Project>
-      <div className="bg-[#dadada] h-0.5 w-full rounded-full my-10"></div>
-      <Project reversed>
-        <Project.Title>Project</Project.Title>
+        <Project.Img src="https://picsum.photos/1920/1080" />
         <Project.Body>
           Morbi et aliquet elit. Aliquam ultricies blandit lectus, vitae posuere
           mi vestibulum nec. Vestibulum sit amet risus scelerisque sapien
@@ -39,6 +28,7 @@ export const Projects: React.FC = () => {
           <Project.Tag>Tailwindcss</Project.Tag>
         </Project.Tags>
       </Project>
+      <div className="h-0.5 w-full rounded-full my-10"></div>
     </section>
   );
 };
@@ -53,6 +43,7 @@ type ProjectSubComponents = {
   Body: typeof Body;
   Tags: typeof Tags;
   Tag: typeof Tag;
+  Img: typeof Img;
 };
 
 const Project: React.FunctionComponent<Props> & ProjectSubComponents = (
@@ -63,18 +54,19 @@ const Project: React.FunctionComponent<Props> & ProjectSubComponents = (
       return React.cloneElement(child, { reversed: props.reversed } as any);
     }
   });
-  return <div>{children}</div>;
+  return (
+    <div className="grid grid-cols-12 grid-rows-3 gap-y-4 w-full">
+      {children}
+    </div>
+  );
 };
 
 const Title = ({ ...props }: Props) => {
   return (
-    <h3
-      className={`text-2xl font-semibold mb-2 lg:w-full ${
-        props.reversed ? "text-end" : ""
-      }`}
-    >
-      {props.children}
-    </h3>
+    <h1 className="row-start-1 row-span-1 col-span-3 text-3xl mt-auto font-semibold">
+      {" "}
+      {props.children}{" "}
+    </h1>
   );
 };
 
@@ -82,19 +74,10 @@ Project.Title = Title;
 
 const Body = ({ ...props }: Props) => {
   return (
-    <div
-      className={`flex w-full drop-shadow-2xl ${
-        props.reversed ? "justify-end" : ""
-      }`}
-    >
-      <p
-        className={`bg-not-black rounded-md p-5 text-not-white lg:w-2/3 ${
-          props.reversed ? "text-end" : ""
-        }`}
-      >
-        {props.children}
-      </p>
-    </div>
+    <p className="bg-not-black text-not-white px-5 py-4 rounded-md shadow-2xl col-span-7 col-start-1 row-start-2 row-span-1 z-10">
+      {" "}
+      {props.children}{" "}
+    </p>
   );
 };
 
@@ -102,12 +85,9 @@ Project.Body = Body;
 
 const Tags = ({ ...props }: Props) => {
   return (
-    <div
-      className={`flex w-full gap-5 mt-3 ${
-        props.reversed ? "justify-end" : ""
-      }`}
-    >
-      {props.children}
+    <div className="flex flex-wrap gap-5 row-start-3 col-start-1 col-span-6">
+      {" "}
+      {props.children}{" "}
     </div>
   );
 };
@@ -115,7 +95,25 @@ const Tags = ({ ...props }: Props) => {
 Project.Tags = Tags;
 
 const Tag = ({ ...props }: Props) => {
-  return <span className="text-accent">{props.children}</span>;
+  return <span className="text-accent"> {props.children} </span>;
 };
 
 Project.Tag = Tag;
+
+type ImgProps = {
+  src: string;
+  alt?: string;
+  reversed?: boolean;
+};
+
+const Img = ({ ...props }: ImgProps) => {
+  return (
+    <img
+      src={props.src}
+      alt={props.alt}
+      className="row-span-full col-start-6 col-span-7 rounded-md transition duration-300 grayscale hover:grayscale-0 hover:scale-105 ease-in-out z-0"
+    />
+  );
+};
+
+Project.Img = Img;
