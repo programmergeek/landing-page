@@ -126,7 +126,7 @@ export const IconButton: React.FC<iconProps> = ({ ...props }) => {
       <div className="flex flex-col w-fit">
         <div className="flex justify-center">
           <button
-            className="rounded-full p-2 md:p-3 border-2 border-not-black bg-transparent"
+            className="rounded-full p-2 md:p-3 border-2 border-not-black bg-not-white"
             onClick={props.onClick}
           >
             {props.icon}
