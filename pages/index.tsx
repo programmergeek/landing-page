@@ -31,6 +31,7 @@ const Home: NextPage = () => {
           <HeroBanner />
           <AboutMe />
           <Projects />
+          <ContactMe />
         </div>
       </main>
     </div>
