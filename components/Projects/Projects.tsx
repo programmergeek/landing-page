@@ -1,5 +1,7 @@
 import React, { Children } from "react";
 import { Header } from "../Header";
+import { BsGithub } from "react-icons/bs";
+import { RxExternalLink } from "react-icons/rx";
 
 export const Projects: React.FC = () => {
   return (
@@ -26,6 +28,10 @@ export const Projects: React.FC = () => {
           <Project.Tag>TypeScript</Project.Tag>
           <Project.Tag>Next UI</Project.Tag>
         </Project.Tags>
+        <Project.Links
+          repoHref="https://github.com/programmergeek/Blog"
+          href="https://blog.willjoseph.xyz"
+        />
       </Project>
       <div className="h-0.5 w-full rounded-full my-3 md:my-0 lg:my-10"></div>
       <Project reversed>
@@ -44,6 +50,10 @@ export const Projects: React.FC = () => {
           <Project.Tag>Material UI</Project.Tag>
           <Project.Tag>Git</Project.Tag>
         </Project.Tags>
+        <Project.Links
+          repoHref="https://github.com/programmergeek/md-editor"
+          href="https://simple-markdown-editor-demo.netlify.app/"
+        />
       </Project>
     </section>
   );
@@ -60,6 +70,7 @@ type ProjectSubComponents = {
   Tags: typeof Tags;
   Tag: typeof Tag;
   Img: typeof Img;
+  Links: typeof Links;
 };
 
 const Project: React.FunctionComponent<Props> & ProjectSubComponents = (
@@ -71,7 +82,7 @@ const Project: React.FunctionComponent<Props> & ProjectSubComponents = (
     }
   });
   return (
-    <div className="grid grid-cols-12 md:grid-rows-[50px_minmax(0,_1fr)_100px] xl:grid-rows-3 gap-y-4 w-full">
+    <div className="grid grid-cols-12 md:grid-rows-[50px_minmax(0,_1fr)_auto_auto] xl:grid-rows-[200px_minmax(0,_1fr)_auto_auto] gap-y-4 w-full">
       {children}
     </div>
   );
@@ -148,3 +159,37 @@ const Img = ({ ...props }: ImgProps) => {
 };
 
 Project.Img = Img;
+
+type LinkProps = {
+  reversed?: boolean;
+  repoHref: string;
+  href?: string;
+};
+
+const Links = ({ ...props }: LinkProps) => {
+  const baseStyles = "row-start-4 col-start-1 col-span-5 flex gap-10";
+  const reversedStyles =
+    "row-start-4 col-end-13 col-span-5 flex gap-10 justify-end";
+  return (
+    <div className={props.reversed ? reversedStyles : baseStyles}>
+      <span>
+        <a href={props.repoHref} target="_blank" rel="noreferrer">
+          <BsGithub
+            className="hover:text-accent transition duration-300 ease-in-out"
+            fontSize={24}
+          />
+        </a>
+      </span>
+      <span>
+        <a href={props.href} target="_blank" rel="noreferrer">
+          <RxExternalLink
+            className="hover:text-accent transition duration-300 ease-in-out"
+            fontSize={24}
+          />
+        </a>
+      </span>
+    </div>
+  );
+};
+
+Project.Links = Links;
