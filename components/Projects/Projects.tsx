@@ -1,7 +1,5 @@
 import React, { Children } from "react";
-import { ProjectCard } from "../Cards/Cards";
 import { Header } from "../Header";
-import styles from "./Projects.module.css";
 
 export const Projects: React.FC = () => {
   return (
@@ -11,40 +9,40 @@ export const Projects: React.FC = () => {
     >
       <Header>Projects</Header>
       <Project>
-        <Project.Title>Project</Project.Title>
-        <Project.Img src="https://picsum.photos/1920/1080" />
+        <Project.Title>Blog</Project.Title>
+        <Project.Img src="images/Blog.png" />
         <Project.Body>
-          Morbi et aliquet elit. Aliquam ultricies blandit lectus, vitae posuere
-          mi vestibulum nec. Vestibulum sit amet risus scelerisque sapien
-          rhoncus molestie. Suspendisse ut quam nisi. Phasellus auctor, leo
-          laoreet vestibulum facilisis, tellus ante fringilla velit, eget
-          egestas sem nisi vitae mi. Maecenas nec mi sit amet velit dignissim
-          lacinia vel nec mauris. Donec non interdum lacus.
+          This project came was inspired by the idea that I have heard being
+          repeated in most tech spaces on the internet, "Document everything".
+          The blog acts as public repository of the things I have learned. It
+          was built using the Next UI which was challenging as I was/am learning
+          how to use component libraries and how to customize them. It might not
+          be the best looking website out there but I did learn a lot from this
+          project.
         </Project.Body>
         <Project.Tags>
-          <Project.Tag>HTML</Project.Tag>
           <Project.Tag>React</Project.Tag>
+          <Project.Tag>Next.js</Project.Tag>
           <Project.Tag>TypeScript</Project.Tag>
-          <Project.Tag>Tailwindcss</Project.Tag>
+          <Project.Tag>Next UI</Project.Tag>
         </Project.Tags>
       </Project>
       <div className="h-0.5 w-full rounded-full my-3 md:my-0 lg:my-10"></div>
       <Project reversed>
-        <Project.Title>Project</Project.Title>
-        <Project.Img src="https://picsum.photos/1920/1080" />
+        <Project.Title>Markdown Editor</Project.Title>
+        <Project.Img src="images/markdownEditor.png" />
         <Project.Body>
-          Morbi et aliquet elit. Aliquam ultricies blandit lectus, vitae posuere
-          mi vestibulum nec. Vestibulum sit amet risus scelerisque sapien
-          rhoncus molestie. Suspendisse ut quam nisi. Phasellus auctor, leo
-          laoreet vestibulum facilisis, tellus ante fringilla velit, eget
-          egestas sem nisi vitae mi. Maecenas nec mi sit amet velit dignissim
-          lacinia vel nec mauris. Donec non interdum lacus.
+          This projet came to be out of frustration with the contentful rich
+          text editor that provided no distinction between inline code and code
+          blocks. This project is supposed to act as a prototype for an add-on
+          to replace the default rich text editor.
         </Project.Body>
         <Project.Tags>
-          <Project.Tag>HTML</Project.Tag>
           <Project.Tag>React</Project.Tag>
+          <Project.Tag>Next.js</Project.Tag>
           <Project.Tag>TypeScript</Project.Tag>
-          <Project.Tag>Tailwindcss</Project.Tag>
+          <Project.Tag>Material UI</Project.Tag>
+          <Project.Tag>Git</Project.Tag>
         </Project.Tags>
       </Project>
     </section>
