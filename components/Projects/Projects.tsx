@@ -15,12 +15,12 @@ export const Projects: React.FC = () => {
         <Project.Img src="images/Blog.png" />
         <Project.Body>
           This project came was inspired by the idea that I have heard being
-          repeated in most tech spaces on the internet, "Document everything".
-          The blog acts as public repository of the things I have learned. It
-          was built using the Next UI which was challenging as I was/am learning
-          how to use component libraries and how to customize them. It might not
-          be the best looking website out there but I did learn a lot from this
-          project.
+          repeated in most tech spaces on the internet, &quot;Document
+          everything&quot;. The blog acts as public repository of the things I
+          have learned. It was built using the Next UI which was challenging as
+          I was/am learning how to use component libraries and how to customize
+          them. It might not be the best looking website out there but I did
+          learn a lot from this project.
         </Project.Body>
         <Project.Tags>
           <Project.Tag>React</Project.Tag>
