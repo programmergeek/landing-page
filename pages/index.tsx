@@ -27,7 +27,7 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <main className="container mx-auto">
-        <div className="px-3 sm:px-0">
+        <div className="px-3 sm:px-0 md:px-5 lg:px-10 xl:px-20">
           <HeroBanner />
           <AboutMe />
           <Projects />
