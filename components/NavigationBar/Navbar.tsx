@@ -18,7 +18,7 @@ export const Navbar: React.FC = () => {
             isHidden ? (
               <HiMenu className="w-7 h-7" />
             ) : (
-              <HiX className="w-7 h-7" color="#fff" />
+              <HiX className="w-7 h-7" />
             )
           }
           style="outline"
