@@ -1,5 +1,5 @@
 import React from "react";
-import { BsTwitter, BsGithub } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 
 export const HeroBanner: React.FC = () => {
   return (
@@ -18,15 +18,6 @@ export const HeroBanner: React.FC = () => {
         <span className="flex gap-4 place-content-start">
           <button className="w-fit h-fit rounded-full">
             <a
-              href="https://twitter.com/programergeek"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <BsTwitter fontSize={24} />
-            </a>
-          </button>
-          <button className="w-fit h-fit rounded-full">
-            <a
               href="https://github.com/programmergeek"
               target="_blank"
               rel="noreferrer"
@@ -37,10 +28,10 @@ export const HeroBanner: React.FC = () => {
         </span>
         <span className="text-sm place-self-end">
           <a
-            href="mailto:contact@willjoseph.xyz"
+            href="mailto:thatowilljoseph@gmail.com"
             className="hover:text-accent duration-150"
           >
-            contact@willjoseph.xyz
+            thatowilljoseph@gmail.com
           </a>
         </span>
       </div>
