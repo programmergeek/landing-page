@@ -9,8 +9,7 @@ export const HeroBanner: React.FC = () => {
 
   const glitchEffect = () => {
     // create a list of letters and number for the glitch effect
-    const letters =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+    const letters = "abcdefghijklmnopqrstuvwxyz";
     // create a variable to keep track of the iterations
     let iterations = 0;
     const interval = setInterval(() => {
@@ -21,12 +20,12 @@ export const HeroBanner: React.FC = () => {
             if (index < iterations) {
               return originalText[index];
             }
-            const num = Math.floor(Math.random() * 62);
+            const num = Math.floor(Math.random() * 32);
             return letters[num];
           })
           .join("")
       );
-      if (iterations >= originalText.length) clearInterval(interval);
+      if (iterations >= name.length) clearInterval(interval);
       iterations += 1 / 2;
     }, 35);
   };
@@ -39,8 +38,8 @@ export const HeroBanner: React.FC = () => {
   return (
     <section className="h-[100vh] w-full relative">
       <div className="absolute top-1/2 -translate-y-1/2 ">
-        <div className="flex flex-col gap-6">
-          <div className="text-4xl md:text-6xl">
+        <div className="flex flex-col gap-3 md:gap-6">
+          <div className="text-3xl md:text-6xl">
             I&apos;m{" "}
             <span className="font-semibold" onMouseEnter={glitchEffect}>
               {name}
