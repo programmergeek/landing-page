@@ -9,6 +9,7 @@ import {
 } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
 import { TbBrandGit } from "react-icons/tb";
+import { Header } from "../Header";
 
 export const AboutMe = () => {
   const skills = [
@@ -31,9 +32,7 @@ export const AboutMe = () => {
       >
         <div className="flex flex-col gap-10">
           <div>
-            <h1 className="font-bold text-2xl lg:text-4xl mb-2 md:mb-5">
-              About me...
-            </h1>
+            <Header>About Me</Header>
             <p className="lg:text-xl">
               {`
             My first introduction to coding came in the ninth grade. 
@@ -70,7 +69,7 @@ export const AboutMe = () => {
             </p>
           </div>
           <div>
-            <h1 className="font-bold text-2xl lg:text-4xl">...And my skills</h1>
+            <Header>My Skills</Header>
             <div className="grid grid-cols-4 md:flex flex-wrap gap-6 md:gap-10 lg:gap-20 mt-5 md:mt-10">
               {skills.map((skill) => (
                 <div key={skill.label} className="flex flex-col justify-center">
