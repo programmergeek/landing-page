@@ -92,9 +92,9 @@ const Project: React.FunctionComponent<Props> & ProjectSubComponents = (
 
 const Title = ({ ...props }: Props) => {
   const baseStyles =
-    "row-start-1 row-span-1 col-span-6 text-3xl mt-auto font-semibold";
+    "row-start-1 row-span-1 col-span-6 text-2xl mt-auto font-semibold";
   const reversedStyles =
-    "row-start-1 col-end-13 col-span-6 text-3xl mt-auto font-semibold text-end z-20";
+    "row-start-1 col-end-13 col-span-6 text-2xl mt-auto font-semibold text-end z-20";
   return (
     <h1 className={props.reversed ? reversedStyles : baseStyles}>
       {" "}
