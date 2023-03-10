@@ -27,6 +27,8 @@ export const Projects: React.FC = () => {
           <Project.Tag>Next.js</Project.Tag>
           <Project.Tag>TypeScript</Project.Tag>
           <Project.Tag>Next UI</Project.Tag>
+          <Project.Tag>Git</Project.Tag>
+          <Project.Tag>Contentful CMS</Project.Tag>
         </Project.Tags>
         <Project.Links
           repoHref="https://github.com/programmergeek/Blog"
@@ -90,9 +92,9 @@ const Project: React.FunctionComponent<Props> & ProjectSubComponents = (
 
 const Title = ({ ...props }: Props) => {
   const baseStyles =
-    "row-start-1 row-span-1 col-span-3 text-3xl mt-auto font-semibold";
+    "row-start-1 row-span-1 col-span-6 text-3xl mt-auto font-semibold";
   const reversedStyles =
-    "row-start-1 col-end-13 col-span-3 text-3xl mt-auto font-semibold text-end z-20";
+    "row-start-1 col-end-13 col-span-6 text-3xl mt-auto font-semibold text-end z-20";
   return (
     <h1 className={props.reversed ? reversedStyles : baseStyles}>
       {" "}
