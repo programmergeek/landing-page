@@ -6,7 +6,7 @@ type Props = {
 
 export const Header: React.FC<Props> = ({ ...props }) => {
   const [text, updateText] = useState(props.children?.toString() || "");
-  const originalText = text;
+  const originalText = props.children?.toString() || "";
   const glitchEffect = () => {
     // create a list of letters and number for the glitch effect
     const letters =
