@@ -169,9 +169,10 @@ type LinkProps = {
 };
 
 const Links = ({ ...props }: LinkProps) => {
-  const baseStyles = "row-start-4 col-start-1 col-span-5 flex gap-10";
+  const baseStyles =
+    "row-start-4 col-start-1 col-span-5 flex gap-3 md:gap-5 lg:gap-10";
   const reversedStyles =
-    "row-start-4 col-end-13 col-span-5 flex gap-10 justify-end";
+    "row-start-4 col-end-13 col-span-5 flex gap-3 md:gap-5 lg:gap-10 justify-end";
   return (
     <div className={props.reversed ? reversedStyles : baseStyles}>
       <span>
