@@ -35,7 +35,7 @@ export const Projects: React.FC = () => {
           href="https://blog.willjoseph.xyz"
         />
       </Project>
-      <div className="h-0.5 w-full rounded-full my-3 md:my-0 lg:my-10"></div>
+      <div className="h-0.5 w-full rounded-full my-3 lg:my-10"></div>
       <Project reversed>
         <Project.Title>Markdown Editor</Project.Title>
         <Project.Img src="images/markdownEditor.png" />
@@ -135,7 +135,7 @@ const Tags = ({ ...props }: Props) => {
 Project.Tags = Tags;
 
 const Tag = ({ ...props }: Props) => {
-  return <span className="text-accent"> {props.children} </span>;
+  return <span className="text-accent z-20"> {props.children} </span>;
 };
 
 Project.Tag = Tag;
