@@ -9,7 +9,8 @@ module.exports = {
       fontFamily: {
         playfairDisplay: ['Playfair Display', 'serif'],
         roboto: ['Roboto', 'sans-serif'],
-        sourceCodePro: ['Source Code Pro', 'monospace']
+        sourceCodePro: ['Source Code Pro', 'monospace'],
+        mono: ['Syne Mono', 'monospace']
       },
       colors:{
         folderYellow: "#FDB900",

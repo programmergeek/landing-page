@@ -34,7 +34,7 @@ export const Header: React.FC<Props> = ({ ...props }) => {
 
   return (
     <h1
-      className="font-bold text-3xl lg:text-5xl mb-2 md:mb-5 w-fit"
+      className="font-bold text-3xl font-mono lg:text-5xl mb-2 md:mb-5 w-fit"
       onMouseOver={glitchEffect}
     >
       {text}

@@ -39,7 +39,7 @@ export const HeroBanner: React.FC = () => {
     <section className="h-[100vh] w-full relative">
       <div className="absolute top-1/2 -translate-y-1/2 ">
         <div className="flex flex-col gap-3 md:gap-6">
-          <div className="text-3xl md:text-6xl">
+          <div className="text-3xl md:text-6xl font-mono">
             I&apos;m{" "}
             <span className="font-semibold" onMouseEnter={glitchEffect}>
               {name}
